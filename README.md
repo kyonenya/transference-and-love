@@ -1,6 +1,6 @@
 Jekels, L. & Bergler, E. (1949) “Transference and love”〔L. イェケルス・E. ベルグラー「転移と愛」〕, _The Psychoanalytic Quarterly_, 18(3): pp. 325–350. の全訳
 
-以下で言及されている：ジャック・ラカン『転移』下: pp. 206ff.; pp. 215ff.; pp. 225ff., 岩波書店, 2015年.
+以下で言及されている：ジャック・ラカン『転移』下: pp. 206ff.; pp. 215ff.; pp. 225ff., 小出浩之・鈴木國文・菅原誠一 訳, 岩波書店, 2015年.
 
 ----
 
