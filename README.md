@@ -1,4 +1,4 @@
-[L. イェケルス・E. ベルグラー「転移と愛」の日本語訳](https://github.com/kyonenya/transference-and-love/blob/main/transference-and-love.md)
+**[L. イェケルス・E. ベルグラー「転移と愛」の日本語訳](https://github.com/kyonenya/transference-and-love/blob/main/転移と愛.md)**
 
 Jekels, L. & Bergler, E. (1949) “Transference and love”, _The Psychoanalytic Quarterly_, 18(3): pp. 325–350. の全訳
 
