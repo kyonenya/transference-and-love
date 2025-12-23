@@ -1,0 +1,42 @@
+name: Convert via Pandoc
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+env:
+  src_path: '[0-9]*.md'
+  reference_file: reference.docx
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: set_variables
+        run: |
+          echo "current_date=$(date +"%y%m%d")" >> $GITHUB_OUTPUT
+          echo "src_files=$(printf '"%s" ' ${{ env.src_path }})" >> $GITHUB_OUTPUT # expand path pattern with whitespace
+          mkdir dist
+
+      - uses: docker://pandoc/core:latest
+        with:
+          args: >-
+            -s
+            --toc
+            --toc-depth=2
+            --output=dist/${{ github.event.repository.name }}.docx
+            --reference-doc=${{ env.reference_file }}
+            ${{ steps.set_variables.outputs.src_files }}
+
+      - uses: s0/git-publish-subdir-action@master
+        env:
+          REPO: self
+          BRANCH: ${{ github.ref_name }}_pandoc
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
